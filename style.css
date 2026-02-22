@@ -1,4 +1,16 @@
 /*Main Global CSS*/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     margin: 0;
@@ -7,7 +19,8 @@ body {
 }
 
 .main{
-    padding: 60px 60px;
+    flex: 1;
+    padding: 60px 5%;
     /*Box Sizing allows us to accurately calculate the width and height of everything*/
     box-sizing: border-box;
 }
@@ -15,26 +28,27 @@ body {
 .header{
     border-bottom: 1px solid darkblue;
     background-color: rgb(39, 39, 178);
-    padding: 25px 0;
+    padding: 25px;
 }
 
-.header nav{
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+.header nav {
+    display: flex;
+    gap: 25px;
 }
 
-.header a{
+/*Make Home and Contact Buttons white and thick*/
+.header a {
     color: white;
     text-decoration: none;
-    margin-right: 25px;
     font-weight: 600;
 }
 
+/*Make Home and Contact Buttons have a hover effect where the opacity will lower when we hover it indicating its pressable*/
 .header a:hover{
     opacity: 0.8;
 }
 
+/*Our footer css with icons of*/
 .footer{
     border-top: 1px solid darkblue;
     background-color: rgb(39, 39, 178);
@@ -43,23 +57,32 @@ body {
     text-align: center;
 }
 
+/*Flex automatically lines up our items in a row order. Allowing us to have a distributed space and make our layouts responsive*/
 .content-row{
     display: flex; /*turning on flex*/
     gap: 40px; /*space between boxes*/
+    flex-wrap: wrap; /*for mobile accessibility and wrapping automatically*/
     margin-top: 40px;
-    width: 100%;
 }
 
 .about{
-    flex: 1;
+    flex: 1 1 320px; /*grow | shrink | minimum width*/
     background-color: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
+.about img{ /*Responsive Images*/
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
 .skills{
-    flex: 1;
+    flex: 1 1 320px; /*grow | shrink | minimum width*/
     background-color: white;
     padding: 30px;
     border-radius: 12px;
@@ -67,16 +90,20 @@ body {
 }
 
 .weekly-schedule{
-    flex: 1;
+    flex: 1 1 320px; /*grow | shrink | minimum width*/
     background-color: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
+.table-wrapper {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
-    border-collapse: collapse;
+    min-width: 450px;
 }
 
 th {
@@ -90,15 +117,7 @@ th, td {
     text-align: center;
 }
 
+/*Different colors for even and odd for every table data*/
 tr:nth-child(even) {
     background-color: #f4f6fb;
-}
-
-/* Responsive */
-@media (max-width: 900px) 
-{
-    .content-row
-    {
-        flex-direction: column;
-    }
 }
