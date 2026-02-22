@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+/*flex the whole body so that the footer is fit right*/
 html, body {
     height: 100%;
 }
@@ -120,4 +121,68 @@ th, td {
 /*Different colors for even and odd for every table data*/
 tr:nth-child(even) {
     background-color: #f4f6fb;
+}
+
+
+/* Contact Page Card */
+.contact-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    width: 120px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(39, 39, 178);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Social Icons */
+.footer a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
 }
