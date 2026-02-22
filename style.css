@@ -1,0 +1,104 @@
+/*Main Global CSS*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef3f8;
+}
+
+.main{
+    padding: 60px 60px;
+    /*Box Sizing allows us to accurately calculate the width and height of everything*/
+    box-sizing: border-box;
+}
+
+.header{
+    border-bottom: 1px solid darkblue;
+    background-color: rgb(39, 39, 178);
+    padding: 25px 0;
+}
+
+.header nav{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: 600;
+}
+
+.header a:hover{
+    opacity: 0.8;
+}
+
+.footer{
+    border-top: 1px solid darkblue;
+    background-color: rgb(39, 39, 178);
+    padding: 25px 0;
+    color: white;
+    text-align: center;
+}
+
+.content-row{
+    display: flex; /*turning on flex*/
+    gap: 40px; /*space between boxes*/
+    margin-top: 40px;
+    width: 100%;
+}
+
+.about{
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.skills{
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.weekly-schedule{
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(39, 39, 178);
+    color: white;
+}
+
+th, td {
+    border: 1px solid rgb(39, 39, 178);
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f6fb;
+}
+
+/* Responsive */
+@media (max-width: 900px) 
+{
+    .content-row
+    {
+        flex-direction: column;
+    }
+}

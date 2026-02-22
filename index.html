@@ -1,82 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Felix Azriel Elmido</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+<body>
 
-<header>
-    <meta charset="utf-8"/>
-    <title>Felix Azriel Elmido</title>
-    <link rel="stylesheet" href="style.css" />
-
-    <!--Navigation Bar-->
+<!--Navigation Bar-->
+<header class="header">
     <nav>
         <a href="index.html">Home</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
-<body>
+
 <!--This is the main section-->
-<main>
-    <!--About Me-->
-    <h1 >Felix Azriel Elmido</h1>
-    <h2>About Me</h2>
-    <p>
-        Computer Science student at Maynooth University building full-stack applications in Python and Java. 
-        Strong foundation in object oriented programming, backend logic, and algorithmic problem-solving through academic tutoring, competitive programming,
-        and independent projects. Seeking internship opportunities to grow as a software engineer in collaborative, real-world
-        environments.
-    </p>
-    <img src="profile.jpg" alt="Felix Elmido Profile" style="width:250px; height:200px">
+<main class="main">
+    <h1>Felix Azriel Elmido</h1>
 
-    <!--Skills-->
-    <h2>Skills:</h2>
-    <ul>
-        Databases (SQL), Object-Oriented Programming, Software Testing, Algorithms & Problem Solving
-    </ul>
+    <div class="content-row"> <!--Wrapper-->
 
-    <!--Weekly Schedule-->
-    <h2>Weekly Schedule:</h2>
-    <table border="3">
-        <thead>
-            <tr>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>CS211</td>
-                <td>CS230</td>
-                <td>CS240</td>
-                <td>CS280</td>
-                <td>CS355</td>
-            </tr>
-            <tr>
-                <td>CS335</td>
-                <td>CS280</td>
-                <td>CS230</td>
-                <td>CS240</td>
-                <td>CS211</td>
-            </tr>
-            <tr>
-                <td>CS355</td>
-                <td>CS230</td>
-                <td>CS240</td>
-                <td>CS280</td>
-                <td>CS355</td>
-            </tr>
-            <tr>
-                <td>CSC</td>
-                <td>Gym</td>
-                <td>Run</td>
-                <td>Projects</td>
-                <td>Revision</td>
-            </tr>
-        </tbody>
-    </table>
+        <!--About Me-->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                Computer Science student at Maynooth University building full-stack applications in Python and Java. 
+                Strong foundation in object oriented programming, backend logic, and algorithmic problem-solving through academic tutoring, competitive programming,
+                and independent projects. Seeking internship opportunities to grow as a software engineer in collaborative, real-world
+                environments.
+            </p>
+            <img src="profile.jpg" alt="Felix Elmido Profile" style="width:250px; height:200px">
+        </section>
+
+        <!--Skills-->
+        <section class="skills">
+            <h2>Skills:</h2>
+            <ul>
+                <li>Databases (SQL)</li>
+                <li>Object-Oriented Programming</li>
+                <li>Software Testing</li>
+                <li>Algorithms & Problem Solving</li>
+            </ul>
+        </section>
+
+        <!--Weekly Schedule-->
+        <section class="weekly-schedule">
+            <h2>Weekly Schedule:</h2>
+            <table class="table">
+                <!--Table Head-->
+                <thead>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <!--Table Body-->
+                <tbody>
+                    <tr>
+                        <td>CS211</td>
+                        <td>CS230</td>
+                        <td>CS240</td>
+                        <td>CS280</td>
+                        <td>CS355</td>
+                    </tr>
+                    <tr>
+                        <td>CS335</td>
+                        <td>CS280</td>
+                        <td>CS230</td>
+                        <td>CS240</td>
+                        <td>CS211</td>
+                    </tr>
+                    <tr>
+                        <td>CS355</td>
+                        <td>CS230</td>
+                        <td>CS240</td>
+                        <td>CS280</td>
+                        <td>CS355</td>
+                    </tr>
+                    <tr>
+                        <td>CSC</td>
+                        <td>Gym</td>
+                        <td>Run</td>
+                        <td>Projects</td>
+                        <td>Revision</td>
+                    </tr>
+                </tbody>
+                <!--End of table-->
+            </table>
+        </section>
+
+    </div>
 </main>
-<footer>
+
+<footer class="footer">
+    <p>Follow Me:</p>
 </footer>
+
 </body>
 </html>
