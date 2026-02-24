@@ -8,6 +8,7 @@ html, body {
     height: 100%;
 }
 
+/*This code is the setup for all the items in the body like font and the whole background color, we also use flex here so that the whole body adapts when the browser is minimised or stretched*/
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -16,6 +17,7 @@ body {
     flex-direction: column;
 }
 
+/*In the main part of our code we use flex to balance the sizes*/
 .main{
     flex: 1;
     padding: 60px 5%;
