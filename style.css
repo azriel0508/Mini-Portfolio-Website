@@ -1,14 +1,19 @@
-/*Main Global CSS*/
+/* Global Stuff */
+
+/* Makes sizing easier to control so padding doesn’t mess up widths */
 * {
     box-sizing: border-box;
 }
 
-/*flex the whole body so that the footer is fit right*/
+/* Makes sure the page can stretch fully for footer positioning */
 html, body {
     height: 100%;
 }
 
-/*This code is the setup for all the items in the body like font and the whole background color, we also use flex here so that the whole body adapts when the browser is minimised or stretched*/
+/* Main page setup:
+   - Removes default spacing
+   - Adds clean font and background
+   - Uses flex so footer stays at the bottom */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -17,38 +22,43 @@ body {
     flex-direction: column;
 }
 
-/*In the main part of our code we use flex to balance the sizes*/
+/* Main content grows to fill space between header and footer */
 .main{
     flex: 1;
     padding: 60px 5%;
-    /*Box Sizing allows us to accurately calculate the width and height of everything*/
     box-sizing: border-box;
 }
 
+/* Header */
+
+/* Blue header with spacing and bottom border */
 .header{
     border-bottom: 1px solid darkblue;
     background-color: rgb(39, 39, 178);
     padding: 25px;
 }
 
+/* Aligns navigation links in a row with space between */
 .header nav {
     display: flex;
     gap: 25px;
 }
 
-/*Make Home and Contact Buttons white and thick*/
+/* White bold links for visibility */
 .header a {
     color: white;
     text-decoration: none;
     font-weight: 600;
 }
 
-/*Make Home and Contact Buttons have a hover effect where the opacity will lower when we hover it indicating its pressable*/
+/* Slight fade on hover to show it's clickable */
 .header a:hover{
     opacity: 0.8;
 }
 
-/*Our footer css*/
+/* Footer */
+
+/* Matches header styling for consistency */
 .footer{
     border-top: 1px solid darkblue;
     background-color: rgb(39, 39, 178);
@@ -57,23 +67,30 @@ body {
     text-align: center;
 }
 
-/*Flex automatically lines up our items in a row order. Allowing us to have a distributed space and make our layouts responsive*/
+/* Content Layout */
+
+/* Flex layout for cards.
+   Wraps on smaller screens for responsiveness */
 .content-row{
-    display: flex; /*turning on flex*/
-    gap: 40px; /*space between boxes*/
-    flex-wrap: wrap; /*for mobile accessibility and wrapping automatically*/
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
-.about{
-    flex: 1 1 320px; /*grow | shrink | minimum width*/
+/* Card styling used across sections for consistency */
+.about,
+.skills,
+.weekly-schedule{
+    flex: 1 1 320px;
     background-color: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.about img{ /*Responsive Images*/
+/* Responsive image styling */
+.about img{
     width: 100%;
     height: auto;
     max-width: 250px;
@@ -81,71 +98,66 @@ body {
     margin-top: 15px;
 }
 
-.skills{
-    flex: 1 1 320px; /*grow | shrink | minimum width*/
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
+/* Table Styling */
 
-.weekly-schedule{
-    flex: 1 1 320px; /*grow | shrink | minimum width*/
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
+/* Allows horizontal scroll on smaller screens */
 .table-wrapper {
     overflow-x: auto;
 }
 
+/* Full width table with minimum size protection */
 table {
     width: 100%;
     min-width: 450px;
 }
 
+/* Blue header row for clarity */
 th {
     background-color: rgb(39, 39, 178);
     color: white;
 }
 
+/* Borders and spacing for clean structure */
 th, td {
     border: 1px solid rgb(39, 39, 178);
     padding: 10px;
     text-align: center;
 }
 
-/*Different colors for even and odd for every table data*/
+/* Alternating row colours for readability */
 tr:nth-child(even) {
     background-color: #f4f6fb;
 }
 
+/* ===== Contact Card ===== */
 
-/* Contact Page Card */
+/* Centers and contains the contact form */
 .contact-card {
     max-width: 600px;
     margin: 0 auto;
     background-color: white;
-    padding: 40px;
+    padding: 35px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* Form Layout */
+/* Form Styling */
+
+/* Stacks form elements neatly */
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* Slightly bold labels for clarity */
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: 600;
 }
 
+/* Clean and simple input styling */
 input,
 textarea {
     width: 100%;
@@ -155,6 +167,7 @@ textarea {
     font-size: 14px;
 }
 
+/* Themed button with pointer cursor */
 button {
     width: 120px;
     padding: 10px;
@@ -165,17 +178,20 @@ button {
     cursor: pointer;
 }
 
+/* Small hover feedback */
 button:hover {
     opacity: 0.9;
 }
 
 /* Social Icons */
+
+/* Adds spacing around footer icons */
 .footer a {
     display: inline-block;
-    margin-top: 0px;
     padding: 8px;
 }
 
+/* Controls icon size and smooth hover effect */
 .social-icon {
     width: 35px;
     height: 35px;
@@ -183,6 +199,7 @@ button:hover {
     transition: transform 0.2s ease;
 }
 
+/* Slight zoom on hover for interaction */
 .social-icon:hover {
     transform: scale(1.1);
 }
